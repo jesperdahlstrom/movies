@@ -1,18 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+
+    <b-container fluid="true">
+
+      <b-row>
+
+        <b-col col lg="2">
+          <Sidebar>
+          </Sidebar>
+        </b-col>
+
+        <b-col col lg="10" >
+          <MovieList>
+          </MovieList>
+        </b-col>
+
+      </b-row>
+      
+    </b-container>
+
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import MovieList from "./components/MovieList.vue";
+import Sidebar from "./components/Sidebar/Sidebar.vue";
 
 export default Vue.extend({
   name: "App",
   components: {
-    HelloWorld
+    MovieList,
+    Sidebar
   }
 });
 </script>
@@ -26,4 +45,5 @@ export default Vue.extend({
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
